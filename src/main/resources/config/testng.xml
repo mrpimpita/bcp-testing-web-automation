@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" parallel="tests" thread-count="2">
+    <test name="Test">
+        <parameter name="" value="Chrome"/>
+        <classes>
+            <class name="com.automation.testing.frontend.runner.RunTest"/>
+        </classes>
+    </test>
+</suite>

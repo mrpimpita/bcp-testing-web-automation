@@ -1,0 +1,10 @@
+test-output/
+target/
+.idea/
+.idea/libraries
+build/
+.git/
+*.log
+/logs/
+/bin
+*.iml
