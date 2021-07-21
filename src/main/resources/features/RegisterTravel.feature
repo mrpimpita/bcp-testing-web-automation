@@ -13,7 +13,7 @@ Feature: Register Travel
 
 
   @Regression
-  Scenario Outline: client makes a trip 2 person to Arequipa - Puno  - Cusco
+  Scenario Outline: client makes a trip 2 person to Arequipa - Puno  - Cusco without train
     Given Carla is on the Peru Rail Page
     When select "<Distination>" "<Route>" "<Date Trip>" for trip
     Then the One Way should be selected
