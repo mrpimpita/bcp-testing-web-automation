@@ -1,6 +1,7 @@
 package com.automation.testing.frontend.tasks;
 
 import com.automation.testing.frontend.actions.*;
+import com.automation.testing.frontend.helpers.Screenshot;
 import com.automation.testing.frontend.ui.BookingDestinationPage;
 import com.automation.testing.frontend.ui.PassengerPage;
 import lombok.Builder;
@@ -12,8 +13,6 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class Passenger {
-
-    private final PassengerInfo passengerInfo;
 
     private static final String ELEMENT_1 = "1";
 
@@ -38,6 +37,8 @@ public class Passenger {
     public static final String PASSENGER_TEXTFIELD_EMAIL = ("formPasajero*CONTENIDO*-desEmail");
 
     public static final String PASSENGER_TEXTFIELD_REEMAIL = ("formPasajero*CONTENIDO*-desEmailConfirmacion");
+
+    private final PassengerInfo passengerInfo;
 
     public Passenger(PassengerInfo passengerInfo) {
         this.passengerInfo = passengerInfo;
@@ -89,6 +90,10 @@ public class Passenger {
 
             }catch (Exception e){
 
+                Screenshot.to(driver, "Error-fillSecondtDataAdult");
+
+                throw e;
+
             }
         }
 
@@ -136,6 +141,10 @@ public class Passenger {
                 this.name=name;
 
             }catch (Exception e){
+
+                Screenshot.to(driver, "Error-fillSecondtDataAdult");
+
+                throw e;
 
             }
         }

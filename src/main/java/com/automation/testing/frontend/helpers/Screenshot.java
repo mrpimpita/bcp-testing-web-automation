@@ -28,7 +28,7 @@ public class Screenshot {
         File source = ts.getScreenshotAs(OutputType.FILE);
 
         //store the screen shot path in path variable. Here we are storing the screenshots under screenshots folder
-        String path = System.getProperty("user.dir") + "/test-result/resultado/" + screenShotName + df + ".png";
+        String path = System.getProperty("user.dir") + "/target/screenshot-fail/" + screenShotName + df + ".png";
 
         //create another File object variable which points(refer) to the above stored path variable
         File destination = new File(path);

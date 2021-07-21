@@ -4,6 +4,7 @@ import com.automation.testing.frontend.actions.Click;
 import com.automation.testing.frontend.actions.GetElements;
 import com.automation.testing.frontend.actions.Scroll;
 import com.automation.testing.frontend.actions.WaitUntil;
+import com.automation.testing.frontend.helpers.Screenshot;
 import com.automation.testing.frontend.ui.SchedulesDestinationPage;
 import lombok.Builder;
 import org.apache.commons.lang3.StringUtils;
@@ -45,7 +46,10 @@ public class SchedulesDestination {
 
             }catch (Exception e){
 
-                System.out.println(e.getMessage());
+                Screenshot.to(driver, "Error-chooseTrain");
+
+                throw e;
+
             }
         }
 
@@ -57,7 +61,9 @@ public class SchedulesDestination {
 
             }catch (Exception e){
 
-                System.out.println(e.getMessage());
+                Screenshot.to(driver, "Error-Continue");
+
+                throw e;
             }
 
             return this;
